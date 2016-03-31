@@ -1,6 +1,5 @@
 package com.example.melnikov.myapp;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -11,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.melnikov.myapp.adapter.TabsPagerFragmentAdapter;
+import com.example.melnikov.myapp.adapter.TabsFragmentAdapter;
 
 
 /**
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity{
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
